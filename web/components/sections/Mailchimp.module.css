@@ -1,5 +1,5 @@
 @import "../../styles/custom-media.css";
-@import '../../styles/custom-properties.css';
+@import "../../styles/custom-properties.css";
 
 .root {
   padding: 2rem 0;
@@ -48,7 +48,7 @@
   -webkit-font-smoothing: inherit;
   font: inherit;
   display: block;
-  border: 1px solid var(--color-black, #000);
+  border: 1px solid var(--color-white, #fff);
   flex-grow: 1;
   padding: 1rem;
   width: 100%;
@@ -68,7 +68,7 @@
   margin-top: 1rem;
   display: block;
   padding: 1em;
-  border: 1px solid var(--color-black, #000);
+  border: 1px solid var(--color-white, #fff);
 
   @media (--media-min-medium) {
     margin-top: 0;
