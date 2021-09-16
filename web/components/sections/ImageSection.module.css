@@ -4,10 +4,10 @@
 .root {
   overflow: hidden;
   position: relative;
-  padding: 0 2rem;
+  padding: 0 1rem;
 
   @media (--media-min-medium) {
-    padding: 0 4rem;
+    padding: 0 1rem;
   }
 }
 
@@ -16,7 +16,9 @@
   line-height: var(--font-micro-line-height);
   letter-spacing: 0.5px;
   margin-top: 1em;
-  background: blue;
+  bottom: 16px;
+  left: 16px;
+  position: absolute;
 }
 
 .label + .title {
@@ -25,17 +27,40 @@
 }
 
 .title {
+  display: inline-block;
+  transform: translate(-200px, 0vh) scale3d(1.6, 1, 1);
+  transition-timing-function: ease-in;
+  transition: 1s;
   font-size: var(--font-title3-size);
   line-height: var(--font-title3-line-height);
-  background: purple;
+  background: white;
+  position: absolute;
+  top: 10%;
+  left: 16px;
+}
+.text {
+  position: absolute;
+  top: 20%;
+  left: 16px;
+}
+.fadeInText {
+  transform: translate(0, 0) scale3d(1, 1, 1);
+  background: transparent;
 }
 
 .image {
   display: block;
   width: 100%;
+  transform: scale(1.15) rotate(0deg);
+  transition-timing-function: ease-in;
+  transition: 0.75s;
+}
+.image.scaleImage {
+  transform: scale(1.16) rotate(-1deg);
 }
 
 .content {
+  overflow: hidden;
   position: relative;
   margin: 0 1.5rem;
   max-width: var(--width-medium);
