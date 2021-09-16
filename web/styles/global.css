@@ -1,5 +1,9 @@
 @import "./custom-properties.css";
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: var(--font-family-sans);
   font-size: var(--font-base-size);

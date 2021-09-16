@@ -2,11 +2,12 @@
 @import "../../styles/custom-properties.css";
 
 .root {
+  overflow: hidden;
   position: relative;
-  padding: 2rem 0;
+  padding: 0 2rem;
 
   @media (--media-min-medium) {
-    padding: 4rem 0;
+    padding: 0 4rem;
   }
 }
 
@@ -14,17 +15,19 @@
   font-size: var(--font-micro-size);
   line-height: var(--font-micro-line-height);
   letter-spacing: 0.5px;
-  text-transform: uppercase;
   margin-top: 1em;
+  background: blue;
 }
 
 .label + .title {
   margin-top: 0.2em;
+  background: red;
 }
 
 .title {
   font-size: var(--font-title3-size);
   line-height: var(--font-title3-line-height);
+  background: purple;
 }
 
 .image {
@@ -54,21 +57,17 @@
 }
 
 .caption {
-  width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
+  outline: 1px solid blue;
 
   @media (--media-min-medium) {
-    max-width: calc(var(--width-small) - 3rem);
+    outline: 1px solid red;
   }
 }
 
 .captionBox {
-  background-color: var(--color-black);
-  border: 1px solid var(--color-white);
-  padding: 1.5rem;
-
-  @media (--media-min-medium) {
-    max-width: calc((var(--width-small) / 2) - 3rem);
-  }
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
 }

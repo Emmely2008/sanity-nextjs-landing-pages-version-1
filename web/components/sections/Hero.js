@@ -20,19 +20,22 @@ function Hero(props) {
     : {};
 
   return (
-    <div className={`${styles.root} ${styles[heroType]}`} style={style}>
-      <div className={styles.content}>
-        <h1 className={styles.title}>{heading}</h1>
-        <div className={styles.tagline}>{tagline && <SimpleBlockContent blocks={tagline} />}</div>
-        {ctas && (
-          <div className={styles.ctas}>
-            {ctas.map((cta) => (
-              <Cta {...cta} key={cta._key} />
-            ))}
-          </div>
-        )}
+    <>
+      <div className={styles.gradient}></div>
+      <div className={`${styles.root} ${styles[heroType]}`} style={style}>
+        <div className={styles.content}>
+          <h1 className={styles.title}>{heading}</h1>
+          <div className={styles.tagline}>{tagline && <SimpleBlockContent blocks={tagline} />}</div>
+          {ctas && (
+            <div className={styles.ctas}>
+              {ctas.map((cta) => (
+                <Cta {...cta} key={cta._key} />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
