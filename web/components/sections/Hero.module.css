@@ -103,3 +103,9 @@
 .root p a {
   color: inherit;
 }
+.three_title {
+  position: absolute;
+}
+.three_tagline {
+  position: absolute;
+}
