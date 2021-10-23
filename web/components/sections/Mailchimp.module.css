@@ -65,6 +65,7 @@
   -webkit-font-smoothing: inherit;
   font: inherit;
   background: none;
+  color:  var(--color-white, #fff);
   margin-top: 1rem;
   display: block;
   padding: 1em;

@@ -32,13 +32,15 @@ function ImageSection(props) {
         />
 
         <div className={styles.captionBox}>
-          <h2 className={`${styles.title} ${inView ? styles.fadeInText : ""}`}>{heading}</h2>
+          <h2 className={`${styles.title} ${inView ? styles.fadeInTitle : ""}`}>{heading}</h2>
 
-          <span className={styles.text}>{text && <SimpleBlockContent blocks={text} />}</span>
-          {cta && cta.route && <Cta {...cta} />}
+          <span className={`${styles.text} ${inView ? styles.fadeInText : ""}`}>{text && <SimpleBlockContent blocks={text} />}</span>
+          <div className={`${styles.cta} ${inView ? styles.fadeInCta : ""}`}>{cta && cta.route && <Cta {...cta} />}</div>
           <div className={styles.label}>{label}</div>
         </div>
       </figure>
+
+
     </div>
   );
 }

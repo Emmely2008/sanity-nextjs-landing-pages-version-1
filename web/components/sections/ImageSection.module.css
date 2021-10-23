@@ -4,10 +4,13 @@
 .root {
   overflow: hidden;
   position: relative;
-  padding: 0 1rem;
+  margin: 2rem 0;
+  padding: 0 2rem;
 
   @media (--media-min-medium) {
-    padding: 0 1rem;
+    margin: 4rem 0;
+
+    padding: 0 4rem;
   }
 }
 
@@ -17,14 +20,11 @@
   letter-spacing: 0.5px;
   margin-top: 1em;
   bottom: 16px;
-  left: 16px;
+  right: 16px;
   position: absolute;
 }
 
-.label + .title {
-  margin-top: 0.2em;
-  background: red;
-}
+
 
 .title {
   display: inline-block;
@@ -38,14 +38,24 @@
   top: 10%;
   left: 16px;
 }
-.text {
+.text{
   position: absolute;
-  top: 20%;
+
   left: 16px;
+  opacity:0;
+  transition-timing-function: ease-in;
+  transition: 7s;
+
+  top: 20%;
+
 }
-.fadeInText {
+
+.fadeInTitle {
   transform: translate(0, 0) scale3d(1, 1, 1);
   background: transparent;
+}
+.fadeInText {
+  opacity:1;
 }
 
 .image {
@@ -54,9 +64,11 @@
   transform: scale(1.15) rotate(0deg);
   transition-timing-function: ease-in;
   transition: 0.75s;
+  filter: blur(1px);
 }
 .image.scaleImage {
-  transform: scale(1.16) rotate(-1deg);
+  transform: scale(1.16) rotate(-0.5deg);
+  filter: blur(0px);
 }
 
 .content {
@@ -81,18 +93,31 @@
   }
 }
 
-.caption {
-  outline: 1px solid blue;
+
+.cta {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+
 
   @media (--media-min-medium) {
-    outline: 1px solid red;
   }
+
 }
 
-.captionBox {
+.cta   a{
+  border: none;
+}
+
+
+/* .captionBox {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
   background: transparent;
 }
+ */
+
+
+

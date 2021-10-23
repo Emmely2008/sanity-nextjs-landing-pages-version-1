@@ -81,6 +81,7 @@
   margin-bottom: 1rem;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 
+
   @media (--media-min-medium) {
     font-size: var(--font-large-size);
     line-height: var(--font-large-line-height);
@@ -108,4 +109,84 @@
 }
 .three_tagline {
   position: absolute;
+}
+
+
+.root3{
+}
+.text3{
+position:absolute;
+top: 33vh;
+width:100%;
+
+}
+.title3{
+  margin: 1vh;
+  text-align: center;
+}
+.tagline3{
+  margin: 1vh;
+  text-align: center;
+
+	color: transparent;
+	animation: blur 1.5s ease-out forwards;
+	-webkit-animation: blur 1.5s ease-out forwards;
+
+	animation-delay: 0.7s;
+	-webkit-animation-delay: 0.7s;
+
+}
+.canvas{
+  display: flex;
+}
+
+.span3 {
+	color: transparent;
+	animation: blur 1.5s ease-out  forwards;
+	-webkit-animation: blur 1.5s ease-out forwards;
+}
+
+.span3:nth-child(1) {
+	animation-delay: 0.1s;
+	-webkit-animation-delay: 0.1s;
+}
+.span3:nth-child(2) {
+	animation-delay: 0.2s;
+	-webkit-animation-delay: 0.2s;
+}
+.span3:nth-child(3) {
+	animation-delay: 0.3s;
+	-webkit-animation-delay: 0.3s;
+}
+.span3:nth-child(4) {
+	animation-delay: 0.4s;
+	-webkit-animation-delay: 0.4s;
+}
+.span3:nth-child(5) {
+	animation-delay: 0.5s;
+	-webkit-animation-delay: 0.5s;
+}
+.span3:nth-child(6) {
+	animation-delay: 0.6s;
+	-webkit-animation-delay: 0.6s;
+}
+.span3:nth-child(7) {
+	animation-delay: 0.7s;
+	-webkit-animation-delay: 0.7s;
+}
+
+@keyframes blur {
+	0%		{text-shadow:  0 0 100px #fff; opacity:0;}
+	5%		{text-shadow:  0 0 90px #fff;}
+	10%		{opacity: 1;}
+	40%		{text-shadow:  0 0 90px #fff;}
+	100%	{text-shadow:  0 0 0 #fff; opacity:1;}
+}
+
+@-webkit-keyframes blur {
+	0%		{text-shadow:  0 0 100px #fff; opacity:0;}
+	5%		{text-shadow:  0 0 90px #fff;}
+	10%		{opacity: 1;}
+	40%		{text-shadow:  0 0 90px #fff;}
+	100%	{text-shadow:  0 0 0 #fff; opacity:1;}
 }
