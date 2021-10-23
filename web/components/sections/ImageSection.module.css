@@ -1,12 +1,16 @@
 @import "../../styles/custom-media.css";
-@import '../../styles/custom-properties.css';
+@import "../../styles/custom-properties.css";
 
 .root {
+  overflow: hidden;
   position: relative;
-  padding: 2rem 0;
+  margin: 2rem 0;
+  padding: 0 2rem;
 
   @media (--media-min-medium) {
-    padding: 4rem 0;
+    margin: 4rem 0;
+
+    padding: 0 4rem;
   }
 }
 
@@ -14,25 +18,61 @@
   font-size: var(--font-micro-size);
   line-height: var(--font-micro-line-height);
   letter-spacing: 0.5px;
-  text-transform: uppercase;
   margin-top: 1em;
+  bottom: 16px;
+  right: 16px;
+  position: absolute;
 }
 
-.label + .title {
-  margin-top: 0.2em;
-}
+
 
 .title {
+  display: inline-block;
+  transform: translate(-200px, 0vh) scale3d(1.6, 1, 1);
+  transition-timing-function: ease-in;
+  transition: 1s;
   font-size: var(--font-title3-size);
   line-height: var(--font-title3-line-height);
+  background: white;
+  position: absolute;
+  top: 10%;
+  left: 16px;
+}
+.text{
+  position: absolute;
+
+  left: 16px;
+  opacity:0;
+  transition-timing-function: ease-in;
+  transition: 7s;
+
+  top: 20%;
+
+}
+
+.fadeInTitle {
+  transform: translate(0, 0) scale3d(1, 1, 1);
+  background: transparent;
+}
+.fadeInText {
+  opacity:1;
 }
 
 .image {
   display: block;
   width: 100%;
+  transform: scale(1.15) rotate(0deg);
+  transition-timing-function: ease-in;
+  transition: 0.75s;
+  filter: blur(1px);
+}
+.image.scaleImage {
+  transform: scale(1.16) rotate(-0.5deg);
+  filter: blur(0px);
 }
 
 .content {
+  overflow: hidden;
   position: relative;
   margin: 0 1.5rem;
   max-width: var(--width-medium);
@@ -53,22 +93,31 @@
   }
 }
 
-.caption {
+
+.cta {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+
+
+  @media (--media-min-medium) {
+  }
+
+}
+
+.cta   a{
+  border: none;
+}
+
+
+/* .captionBox {
+  position: absolute;
+  top: 0;
   width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
-
-  @media (--media-min-medium) {
-    max-width: calc(var(--width-small) - 3rem);
-  }
+  height: 100%;
+  background: transparent;
 }
+ */
 
-.captionBox {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-black);
-  padding: 1.5rem;
 
-  @media (--media-min-medium) {
-    max-width: calc((var(--width-small) / 2) - 3rem);
-  }
-}
+

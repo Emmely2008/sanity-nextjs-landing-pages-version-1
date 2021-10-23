@@ -2,8 +2,9 @@
   --wide-container: 60rem;
   --narrow-container: 40rem;
 
-  --font-family-sans: -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-sans: "Didot", -apple-system, BlinkMacSystemFont, sans-serif;
 
+  --color-black-black: #000;
   --color-black: #202123;
   --color-dark-gray: #32373e;
   --color-gray: #697a90;
@@ -11,6 +12,9 @@
   --color-very-light-gray: #e7ebed;
   --color-white: #fff;
   --color-accent: #156dff;
+
+  --color-base-font: var(--color-white);
+  --color-base-bg: var(--color-black);
 
   /* Typography */
   --unit: 16;

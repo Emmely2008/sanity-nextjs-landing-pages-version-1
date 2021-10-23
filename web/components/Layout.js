@@ -5,6 +5,8 @@ import Head from 'next/head'
 import {LogoJsonLd} from 'next-seo'
 import Header from './Header'
 import Footer from './Footer'
+import styles from './Layout.module.css'
+
 
 function Layout (props) {
   const {config, children} = props
@@ -24,10 +26,21 @@ function Layout (props) {
       </Head>
       <div className='container'>
         <Header title={title} navItems={mainNavigation} logo={logo} />
-        <div className='content'>{children}</div>
+        <div className='content'>{children}
+
+
+        { [...new Array(100)].map((i,idx) =>{
+
+return(<div className={styles["circle-container"]} key={idx}>
+ <div className={styles["circle"]}></div>
+</div>)}
+)}
+        </div>
         <Footer navItems={footerNavigation} text={footerText} />
         {logoUrl && url && <LogoJsonLd url={url} logo={logoUrl} />}
       </div>
+
+
     </>
   )
 }
